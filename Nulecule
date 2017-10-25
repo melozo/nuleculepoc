@@ -1,0 +1,27 @@
+---
+specversion: 0.0.2
+id: helloapache-app
+
+metadata:
+  name: Hello Atomic POC
+  appversion: 0.0.1
+  description: Atomic PoC
+  location: docker.io/czubeldia/nuleculepoc
+
+params:
+    - name: provider
+      description: The specified default provider.
+      default: docker
+
+graph:
+  - name: helloapache-app
+    params:
+      - name: image
+        description: The webserver image
+        default: centos/httpd
+      - name: hostport
+        description: The host TCP port as the external endpoint
+        default: 80
+    artifacts:
+      docker:
+        - file://artifacts/docker/hello-apache-pod_run
