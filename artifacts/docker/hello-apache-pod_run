@@ -1,1 +1,1 @@
-docker run -d -p $hostport:$hostport $image
+docker run -d --rm --name $image -p $hostport:$hostport $image
