@@ -22,6 +22,9 @@ graph:
       - name: hostport
         description: The host TCP port as the external endpoint
         default: 80
+      - name: image
+        description: Mariadb server
+        default: mariadb/mariadb:10.0
     artifacts:
       docker:
         - file://artifacts/docker/hello-apache-pod_run
