@@ -1,11 +1,11 @@
 ---
 specversion: 0.0.2
-id: helloapache-app
+id: nuleculepoc
 
 metadata:
-  name: Hello Atomic POC
-  appversion: 0.0.1
-  description: Atomic PoC
+  name: Hello Nulecule POC
+  appversion: 0.0.2
+  description: Atomic PoC 2
   location: docker.io/czubeldia/nuleculepoc
 
 params:
@@ -14,7 +14,7 @@ params:
       default: docker
 
 graph:
-  - name: helloapache-app
+  - name: virgo
     params:
       - name: image
         description: The webserver image
@@ -22,9 +22,29 @@ graph:
       - name: hostport
         description: The host TCP port as the external endpoint
         default: 80
+
+    artifacts:
+        docker:
+          - file://artifacts/docker/hello-apache-pod_run
+
+  - name: maria
+    params:
       - name: image
         description: Mariadb server
         default: mariadb/mariadb:10.0
+      - name: hostport
+        description: The host TCP port as the external endpoint
+        default: 3306
+      - name: DB_USER
+        description: Database user
+        default: melo
+      - name: DB_PASS
+        description: Database password for DB_USER
+        default: melo
+      - name: DB_NAME
+        description: Database name
+        default: melo
+
     artifacts:
       docker:
-        - file://artifacts/docker/hello-apache-pod_run
+        - file://artifacts/docker/mariadb_run
