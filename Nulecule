@@ -31,7 +31,7 @@ graph:
     params:
       - name: image
         description: Mariadb server
-        default: docker.io/mariadb/mariadb
+        default: mariadb:latest
       - name: hostport
         description: The host TCP port as the external endpoint
         default: 3306
