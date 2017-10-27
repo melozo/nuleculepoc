@@ -16,7 +16,7 @@ params:
 graph:
   - name: virgo
     params:
-      - name: image
+      - name: virgo
         description: The webserver image
         default: centos/httpd
       - name: hostport
@@ -29,7 +29,7 @@ graph:
 
   - name: maria
     params:
-      - name: image
+      - name: maria
         description: Mariadb server
         default: mariadb
       - name: hostport
