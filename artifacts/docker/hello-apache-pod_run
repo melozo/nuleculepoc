@@ -1,1 +1,1 @@
-docker run -d --rm --name virgo -p $hostport:$hostport $image
+docker run -d --name virgo -p $hostport:$hostport $image
