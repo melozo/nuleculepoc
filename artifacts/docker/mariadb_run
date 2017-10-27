@@ -1,0 +1,1 @@
+docker run -d --rm --name maria -p $hostport:$hostport -e DB_USER=$DB_USER -e DB_PASS=$DB_PASS -e DB_NAME=$DB_NAME mariadb:latest
