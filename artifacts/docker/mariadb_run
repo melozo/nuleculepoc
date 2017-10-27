@@ -1,1 +1,1 @@
-docker run -d --name $name -p $hostport:3306 -e DB_USER=$DB_USER -e DB_PASS=$DB_PASS -e DB_NAME=$DB_NAME $image
+docker run -d --name ${NAME} -p $hostport:3306 -e DB_USER=$DB_USER -e DB_PASS=$DB_PASS -e DB_NAME=$DB_NAME ${IMAGE}

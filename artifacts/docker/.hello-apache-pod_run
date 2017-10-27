@@ -1,1 +1,1 @@
-docker run -d --rm --name virgo -p 80:80 centos/httpd
+docker run -d --name virgo -p 80:80 centos/httpd

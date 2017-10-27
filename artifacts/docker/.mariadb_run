@@ -1,1 +1,1 @@
-docker run -d --rm --name maria -p 3306:3306 -e DB_USER=melo -e DB_PASS=melo -e DB_NAME=melo docker.io/library/mariadb
+docker run -d --name maria -p 3306:3306 -e DB_USER=melo -e DB_PASS=melo -e DB_NAME=melo mariadb/mariadb

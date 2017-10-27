@@ -1,0 +1,20 @@
+[nuleculepoc]
+namespace = default
+provider = docker
+[virgo]
+virgo = centos/httpd
+image = centos/httpd
+name = virgo
+hostport = 80
+[maria]
+DB_NAME = melo
+name = maria
+image = mariadb/mariadb
+namespace = default
+DB_PASS = melo
+DB_USER = melo
+hostport = 3306
+maria = mariadb
+[general]
+namespace = default
+provider = docker
