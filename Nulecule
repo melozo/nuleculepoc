@@ -31,7 +31,7 @@ graph:
     params:
       - name: image
         description: Mariadb server
-        default: mariadb/mariadb
+        default: mariadb
       - name: hostport
         description: The host TCP port as the external endpoint
         default: 3306
